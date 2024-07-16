@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <div class="flex justify-center items-center h-screen bg-gradient-to-t from-[#8d3710] to-[#064059]">
+            <div class="relative flex justify-center items-center bg-[url(Images/Search_page_bg.jpg)] bg-center bg-cover min-w-[800px] min-h-[500px] text-white">
+                <div class="absolute bg-[#0000006e] min-w-[800px] min-h-[500px] z-10"></div>
+                
+                <div class="text-center z-20">
+                    <h1 class="absolute top-[135px] left-[310px] text-2xl font-bold text-center">Weather Report</h1>
+                    <p class="divide-x border rounded-md w-fit text-xl"><input type="text" id="city_name" placeholder="Search city" class="outline-none p-2 bg-transparent text-xl placeholder:text-white focus:placeholder-transparent"><i class="icon ion-md-locate p-2"></i></p>
+                    <button type="button" onclick="SaveValue()" class="border py-1 px-2 rounded-md my-5"><a href="Report_1.html">Show Report</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        
+        function SaveValue(){
+            const in_val = document.getElementById('city_name').value;
+            localStorage.setItem("Cities", in_val);
+            
+        }
+        in_val.innerHTMl = "";
+    </script>
+</body>
+</html>
